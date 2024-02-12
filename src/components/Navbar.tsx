@@ -125,7 +125,7 @@ const Navbar = () => {
         </div>
       </nav>
       <section className="flex max-w-7xl px-3 pb-5 md:hidden">
-        <div className="relative w-screen">
+        <div className=" fixed top-20 p-2 w-screen">
           <SearchBar
             value={city}
             onChange={handleSearchChange}
