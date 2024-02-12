@@ -97,16 +97,16 @@ const Navbar = () => {
             GroovyForecasting{" "}
             <MdWbSunny className="text-3xl mt-1 text-yellow-400" />
           </h2>
-          <section className="flex gap-2 items-center">
+          <section className="relative hidden md:flex gap-2 items-center ml-2">
             <MdMyLocation
               title="My Location"
               onClick={handleCurrentLocation}
-              className="text-2xl  hover:opacity-80 cursor-pointer"
+              className="text-2xl  hover:opacity-80 cursor-pointer "
             />
             <MdOutlineLocationOn className="text-3xl" />
             <p className="text-gray-800/90 font-medium text-sm">{place}</p>
 
-            <div className="relative hidden md:flex">
+            <div>
               <SearchBar
                 value={city}
                 onChange={handleSearchChange}
@@ -124,8 +124,16 @@ const Navbar = () => {
           </section>
         </div>
       </nav>
-      <section className="flex max-w-7xl px-3 pb-5 md:hidden">
-        <div className=" fixed top-20 p-2 w-screen">
+      <section className=" gap-2 items-center flex max-w-7xl mx-auto pb-5 md:hidden z--20">
+        <MdMyLocation
+          title="My Location"
+          onClick={handleCurrentLocation}
+          className="text-2xl  hover:opacity-80 cursor-pointer"
+        />
+        <MdOutlineLocationOn className="text-3xl" />
+        <p className="text-gray-800/90 font-medium text-sm">{place}</p>
+
+        <div>
           <SearchBar
             value={city}
             onChange={handleSearchChange}
